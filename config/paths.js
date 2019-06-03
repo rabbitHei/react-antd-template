@@ -4,6 +4,13 @@ const path = require('path');
 const fs = require('fs');
 const url = require('url');
 
+//获取参数-fan-S
+var minimist = require('minimist');
+var args = minimist(process.argv.slice(2));
+var runEnv = args['env']||'test';
+console.log(runEnv);
+//获取参数-fan-E
+
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/facebook/create-react-app/issues/637
 const appDirectory = fs.realpathSync(process.cwd());
@@ -23,7 +30,7 @@ function ensureSlash(inputPath, needsSlash) {
 }
 
 const getPublicUrl = appPackageJson =>
-  envPublicUrl || require(appPackageJson).homepage;
+  envPublicUrl || require(appPackageJson).homepage[runEnv];
 
 // We use `PUBLIC_URL` environment variable or "homepage" field to infer
 // "public path" at which the app is served.
