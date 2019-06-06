@@ -8,6 +8,7 @@ const url = require('url');
 var minimist = require('minimist');
 var args = minimist(process.argv.slice(2));
 var runEnv = args['env']||'test';
+process.env.NODE_ENV = runEnv;
 console.log(runEnv);
 //获取参数-fan-E
 
