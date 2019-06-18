@@ -63,13 +63,6 @@
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.2.0"
   },
-  "scripts": {
-    "start": "node scripts/start.js --env=dev",
-    "build": "node scripts/build.js --env=test",
-    "build:uat": "node scripts/build.js --env=uat",
-    "build:pro": "node scripts/build.js --env=pro",
-    "test": "node scripts/test.js"
-  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -135,9 +128,20 @@
       "react-app"
     ]
   },
+  "scripts": {
+    "start": "node scripts/start.js --env=dev",
+    "build": "node scripts/build.js --env=test",
+    "build:uat": "node scripts/build.js --env=uat",
+    "build:pro": "node scripts/build.js --env=pro",
+    "test": "node scripts/test.js"
+  },
   "homepage": {
     "pro": "www",
     "uat":"uat",
     "test": "test"
+  },
+  "xpm3": {
+    "rep": "sr012018",
+    "output": "build/"
   }
 }
