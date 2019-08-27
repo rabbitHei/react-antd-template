@@ -5,10 +5,16 @@ const fs = require('fs');
 const url = require('url');
 
 //获取参数-fan-S
+var envObj={//与插件babel-preset-react-app 内部使用环境统一 用与编译ES5
+  dev:'development',
+  uat:'uat',
+  test:'test',
+  pro:'production'
+}
 var minimist = require('minimist');
 var args = minimist(process.argv.slice(2));
 var runEnv = args['env']||'test';
-process.env.NODE_ENV = runEnv;
+process.env.NODE_ENV = envObj[runEnv];
 console.log(runEnv);
 //获取参数-fan-E
 
