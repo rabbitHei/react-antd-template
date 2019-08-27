@@ -81,7 +81,15 @@ module.exports = function(proxy, allowedHost) {
       disableDotRule: true,
     },
     public: allowedHost,
-    proxy,
+    // proxy,
+    proxy:{
+      '/anchor-read-web': {
+        target: 'http://m.test.ximalaya.com',
+        // target: 'http://m.ximalaya.com',
+        // secure: false,
+        changeOrigin: true,
+      },
+    },
     before(app, server) {
       if (fs.existsSync(paths.proxySetup)) {
         // This registers user provided middleware for proxy reasons
