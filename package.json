@@ -143,5 +143,8 @@
   "xpm3": {
     "rep": "sr012018",
     "output": "build/"
+  },
+  "yxpm": {
+    "output": "build/"
   }
 }
