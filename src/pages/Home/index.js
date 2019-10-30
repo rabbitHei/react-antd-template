@@ -10,6 +10,7 @@ export default class Home extends Component {
         <Button type="primary">react-router</Button>
         <Button type="primary">axios</Button>
         <Button type="primary">antd</Button>
+        <Button className='less' type="primary">less样式编译</Button>
       </div>
     )
   }

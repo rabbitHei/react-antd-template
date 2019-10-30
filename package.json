@@ -138,9 +138,9 @@
     "test": "node scripts/test.js"
   },
   "homepage": {
-    "pro": "www",
-    "uat":"uat",
-    "test": "test"
+    "pro": "//s1.xmcdn.com/yx/xxx/last/build/",
+    "uat": "//s1.uat.xmcdn.com/yx/xxx/last/build/",
+    "test": "//static2.test.ximalaya.com/yx/xxx/last/build/"
   },
   "xpm3": {
     "rep": "sr012018",
@@ -148,5 +148,8 @@
   },
   "yxpm": {
     "output": "build/"
+  },
+  "devDependencies": {
+    "query-string": "^6.8.3"
   }
 }
